@@ -20,12 +20,6 @@ public class EleicaoController {
 	public ModelAndView listar() {
 		ModelAndView modelAndView = new ModelAndView("ListaCandidatos");
 		modelAndView.addObject("icandidatos", icandidatos.findAll());
-
-		for (Candidato candidato : icandidatos.findAll()) {
-			System.out.println(candidato.getId());
-			System.out.println(candidato.getCpf());
-			System.out.println(candidato.getNome());
-		}
 		modelAndView.addObject(new Candidato());
 		return modelAndView;
 	}
